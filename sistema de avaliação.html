@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Avaliação on-line</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+	<h1 id="txtAvaliacao"><center>Gostaria de realizar a avaliação?</center></h1>
+	<h1 id="txtAvaliacao2" style="display:none;"><center>Gostaria de realizar a avaliação novamente?</center></h1>
+  	<center><button type="button" id="btnSim" class="btn btn-success" onclick="Tentativa1();">Sim</button><button type="button" id="btnNao" class="btn btn-danger" onclick="clicaNoNao()">Não</button></center>
+<div id="apareceProva" style="display:none;">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-11">
+	<h1><center>Avaliação On-line</center></h1>
+	<p>1 - Führer signifa líder?</p>
+	<input type="radio" name="radios" value="Sim" id="Certo">Sim
+	<input type="radio" name="radios" value="Não" id="btnNao">Não
+
+	<br></br>
+	<p>2 - Onde fica localizado o Vale do Silício?</p>
+	<form>
+		<input type="radio" name="radios" value="Sim" >Nova york
+		<br>
+		<input type="radio" name="radios" value="Não" id="Certo2">Califórnia
+		<br>
+		<input type="radio" name="radios" value="Sim" >São Francisco
+		<br>
+		<input type="radio" name="radios" value="Não" >Washington
+		<br>
+		<input type="radio" name="radios" value="Sim" >Londres
+	</form>
+		
+	</br>
+	<form>
+		<p>3 - A mudança da moeda enquanto no governo de Color favoreceu o país?</p>
+		<input type="radio" name="radios" value="Sim" id="btnPergunta3Sim">Sim
+		<input type="radio" name="radios" value="Não" id="Certo3">Não
+		<p></p>
+		<p>Justifique:</p>
+		<textarea class="justifica" style="width: 300px; height: 180px; max-width: 300px; max-height: 180px; min-height: 180px; min-width: 300px;" id="txtArea"></textarea>
+	</form>
+	
+	<form style="margin-top: 10px;">
+		<p>4 - Assinale com verdadeiro e falso:  </p>
+		<div class="row">
+			<div class="col-lg-12">
+				<b style="font-size: 18px;">(</b><input type="text" maxlength="1" style="width: 10px; border:none;"><b style="font-size: 18px;">)</b>A Russia não é o maior país do mundo.
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<b style="font-size: 18px;">(</b><input type="text" maxlength="1" style="width: 10px; border:none;"><b style="font-size: 18px;">)</b>Houve um engarrafamento que durou mais de 10 dias na China.
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<b style="font-size: 18px;">(</b><input type="text" maxlength="1" style="width: 10px; border:none;"><b style="font-size: 18px;">)</b>O hino nacional da Espanha não tem palavras.
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<b style="font-size: 18px;">(</b><input type="text" maxlength="1" style="width: 10px; border:none;"><b style="font-size: 18px;">)</b>Os cabelos e as unhas continuam crescendo depois da morte.
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<b style="font-size: 18px;">(</b><input type="text" maxlength="1" style="width: 10px; border:none;"><b style="font-size: 18px;">)</b>Os orangotangos dormem em pé.
+			</div>
+		</div>
+		<br>
+	</form>
+	
+	<form>
+		<input type="radio" name="radios" value="Sim" id="">V F V F V
+		<br>
+		<input type="radio" name="radios" value="Não" id="">F F F F V
+		<br>
+		<input type="radio" name="radios" value="Sim" id="">V F F F V
+		<br>
+		<input type="radio" name="radios" value="Não" id="">F V F F V
+		<br>
+		<input type="radio" name="radios" value="Sim" id="">V V V F F
+		<br>
+		<input type="radio" name="radios" value="Sim" id="Certo4">F V V F F
+	</form>
+
+	<br>
+	<form>
+		<p>5 - A metade da metade de 12 é igual a: </p>
+		<input type="radio" name="radios" value="Sim" id="Certo5">3
+		<br>
+		<input type="radio" name="radios" value="Não" id="">2
+		<br>
+		<input type="radio" name="radios" value="Sim" id="">4
+		<br>
+		<input type="radio" name="radios" value="Não" id="">6
+		<br>
+		<input type="radio" name="radios" value="Sim" id="">12
+	</form>
+	
+	<br>
+	<input type="submit" name="btnSubmit" id="btnSubmit" onclick="pegaBotao(); mostraBotoes()" value="Enviar">
+	<input type="submit" name="btnSubmit2" id="btnSubmit2" onclick="fazSegundaVez()" style="display: none" value="Enviar">
+	</div>
+	
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 100px;"></div>
+	</div>
+
+	<script type="text/javascript">
+
+		function pegaBotao(){
+			var Certo = document.getElementById('Certo').checked;
+			var Certo2 = document.getElementById('Certo2').checked;
+			var Certo3 = document.getElementById('Certo3').checked;
+			var Certo4 =  document.getElementById('Certo4').checked;
+			var Certo5 =  document.getElementById('Certo5').checked;
+			var total = 0;
+
+			if(Certo == true){
+				total += 2;
+			}
+			if(Certo2 == true){
+				total = total + 2;
+			}	
+			if(Certo3 == true){
+				total = total + 2;
+			}
+			if(Certo4 == true){
+				total = total + 2;
+			}
+			if(Certo5 == true){
+				total = total + 2;
+			}
+
+			if(total >=6){
+				swal({
+  					title: "Parabéns!",
+  					text: "Você foi aprovado! Nota: "+total,
+  					icon: "success",
+  					button: "Ok!",
+				});		
+			}
+			else{
+				swal("Reprovado!", "Nota: "+total+". Você pode fazer novamente, aperte no sim no topo da tela.");
+			}
+
+			document.getElementById('apareceProva').style.display="none";33
+		}
+
+		function Tentativa1(){
+		 	document.getElementById('apareceProva').style.display="block";
+		 	var btnSim = document.getElementById('btnSim');
+		 	if(btnSim.onclick){
+		 		btnSim.style.display = "none";
+		 		document.getElementById('btnNao').style.display = "none";
+		 		document.getElementById('txtAvaliacao').style.display = "none";
+		 		document.getElementById('txtAvaliacao2').style.display = 'none';
+			}
+		 	swal("Boa!", "Prova disponibilizada", "success");
+		}
+
+		function clicaNoNao(){
+			swal("Beleza!", "Então não faz então!", "warning");
+		}
+
+		function fazSegundaVez(){
+		 	var Certo = document.getElementById('Certo').checked;
+			var Certo2 = document.getElementById('Certo2').checked;
+			var Certo3 = document.getElementById('Certo3').checked;
+			var Certo4 =  document.getElementById('Certo4').checked;
+			var Certo5 =  document.getElementById('Certo5').checked;
+			var total = 0;
+
+			if(Certo == true){
+				total += 2;
+			}
+			if(Certo2 == true){
+				total = total + 2;
+			}	
+			if(Certo3 == true){
+				total = total + 2;
+			}
+			if(Certo4 == true){
+				total = total + 2;
+			}
+			if(Certo5 == true){
+				total = total + 2;
+			}
+
+			if(total >=6){
+				swal({
+  					title: "Parabéns!",
+  					text: "Você foi aprovado! Nota: "+total,
+  					icon: "success",
+  					button: "Ok!",
+				});
+				btnSim = ('$btnSim');	
+			}
+			else{
+				swal("Reprovado!", "Nota: "+total+". Encerraram suas chances!");
+			}
+
+			document.getElementById('apareceProva').style.display="none";
+		}
+		
+
+		function mostraBotoes(){
+		 	var btnSim = document.getElementById('btnSim').style.display = "block";
+		 	var btnNao = document.getElementById('btnNao').style.display = "block";
+		 	document.getElementById('btnSubmit').style.display = "none";
+		 	document.getElementById('btnSubmit2').style.display = "block"; 
+		 	document.getElementById('txtAvaliacao2').style.display = 'block';	
+		}
+
+
+		/*$('#contend').bind('keypress', function(e){
+			if(e.keyCode == 13){
+				return false;
+				alert('Presssionado');
+			}
+		});Bloqueia botão enter*/
+	</script>
+</div>
+</div>
+</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</body>
+</html>
+
